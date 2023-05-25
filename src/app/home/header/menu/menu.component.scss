@@ -1,0 +1,42 @@
+@import "../../../app.component.scss";
+
+.buttonMenu {
+    color: $blueColor !important;
+    font-size: 18px;
+    font-weight: 500;
+
+    &:hover {
+        color: $primaryColor !important;
+        background-color: transparent !important;
+    }    
+
+    &.active {
+        color: $primaryColor  !important;
+    }
+
+
+    @media (max-width: 630px) {
+        display: none;
+    }
+}
+
+.iconMenuMobile {
+    display: none;
+    @media (max-width: 630px) {
+        display: block;
+    }
+}
+
+.buttonMenuMobile {
+    color: $blueColor !important;
+    font-size: 12px;
+    font-weight: 500; 
+    display: block;
+    margin-left: 10px;
+    padding: 10px;
+
+    &:hover {
+        color: $primaryColor !important;
+    }   
+}
+

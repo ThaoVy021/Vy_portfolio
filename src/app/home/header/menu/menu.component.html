@@ -1,0 +1,61 @@
+<div>
+  <a
+    href="#"
+    mat-button
+    class="mr-10 buttonMenu "
+    (click)="setActiveButton('home')"
+    [class.active]="activeButton === 'home'"
+  >
+    Home
+  </a>
+
+  <a
+    href="#"
+    mat-button
+    class="mr-10 buttonMenu"
+    (click)="setActiveButton('Services')"
+    [class.active]="activeButton === 'Services'"
+  >
+    Services
+  </a>
+
+  <a
+    href="#"
+    mat-button
+    class="mr-10 buttonMenu"
+    (click)="setActiveButton('Works')"
+    [class.active]="activeButton === 'Works'"
+  >
+    Works
+  </a>
+
+  <a
+    href="#"
+    mat-button
+    class="mr-10 buttonMenu"
+    (click)="setActiveButton('Contact')"
+    [class.active]="activeButton === 'Contact'"
+  >
+    Contact
+  </a>
+</div>
+
+<button
+  mat-icon-button
+  color="warn"
+  [matMenuTriggerFor]="menu"
+  class="iconMenuMobile"
+  aria-label="Example icon button with a menu icon"
+>
+  <mat-icon>menu</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu" class="block">
+  <button mat-menu class="mr-10 buttonMenuMobile">Home</button>
+
+  <button mat-menu class="mr-10 buttonMenuMobile">Services</button>
+
+  <button mat-menu class="mr-10 buttonMenuMobile">Works</button>
+
+  <button mat-menu class="mr-10 buttonMenuMobile">Contact</button>
+</mat-menu>

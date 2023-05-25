@@ -1,0 +1,106 @@
+@import '../../../app.component.scss';
+
+.introduce-total {
+  @media (max-width: 634px) {
+    padding-top: 3rem !important;
+  }
+
+  .introduce {
+    @media (max-width: 634px) {
+      display: block;
+    }
+
+    .introduce-information {
+      .introduce-hi {
+        color: $primaryColor;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      .introduce-name {
+        color: $blueColor;
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 10px 0;
+
+        @media (max-width: 1024px) {
+          font-size: 30px;
+        }
+
+        @media (max-width: 376px) {
+          font-size: 24px;
+        }
+      }
+
+      .introduce-title {
+        color: $blueColor;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 1.2;
+        text-transform: capitalize;
+
+        @media (max-width: 376px) {
+          font-size: 18px;
+        }
+      }
+
+      .introduce-summary {
+        color: $text-gray;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .introduce-button-download {
+        padding: 10px 30px;
+        cursor: pointer;
+        background-color :$primaryColor;
+        color: $white;
+        border: 2px solid transparent;
+        border-radius: 50px;
+        transition: all 0.5s ease;
+
+
+        &:hover {
+          background-color :$white;
+          color: $primaryColor;
+          border: 2px solid $primaryColor;
+        }
+      }
+
+      .introduce-button-contact {
+        padding: 10px 30px;
+        cursor: pointer;
+        background-color :$white;
+        color: $primaryColor;
+        border: 2px solid $primaryColor;
+        border-radius: 50px;
+        transition: all 0.5s ease;
+        
+
+        &:hover {
+         background-color :$primaryColor;
+          color: $white;
+          border: 2px solid transparent;
+        }
+      }
+
+      .example-button-row button,
+      .example-button-row a {
+        margin-right: 8px;
+      }
+
+      .example-disabled {
+        display: inline-block;
+      }
+      
+    }
+
+    img {
+      @media (max-width: 634px) {
+        padding-top: 3rem;
+      }
+    }
+  }
+}
