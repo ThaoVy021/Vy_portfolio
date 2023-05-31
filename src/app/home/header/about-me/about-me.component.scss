@@ -55,15 +55,14 @@
       .introduce-button-download {
         padding: 10px 30px;
         cursor: pointer;
-        background-color :$primaryColor;
+        background-color: $primaryColor;
         color: $white;
         border: 2px solid transparent;
         border-radius: 50px;
         transition: all 0.5s ease;
 
-
         &:hover {
-          background-color :$white;
+          background-color: $white;
           color: $primaryColor;
           border: 2px solid $primaryColor;
         }
@@ -72,29 +71,41 @@
       .introduce-button-contact {
         padding: 10px 30px;
         cursor: pointer;
-        background-color :$white;
+        background-color: $white;
         color: $primaryColor;
         border: 2px solid $primaryColor;
         border-radius: 50px;
         transition: all 0.5s ease;
-        
 
         &:hover {
-         background-color :$primaryColor;
+          background-color: $primaryColor;
           color: $white;
           border: 2px solid transparent;
         }
       }
 
-      .example-button-row button,
-      .example-button-row a {
-        margin-right: 8px;
+      .example-button-row {
+        @media (max-width: 365px) {
+          display: inline-grid;
+        }
+
+        a {
+          margin-right: 8px;
+
+          @media (max-width: 365px) {
+            margin-top: 1rem;
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 365px) {
+          margin-top: 0;
+        }
       }
 
       .example-disabled {
         display: inline-block;
       }
-      
     }
 
     img {

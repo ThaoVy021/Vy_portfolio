@@ -1,17 +1,20 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { FormsModule } from '@angular/forms'
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './home/header/header.component';
-import { MenuComponent } from './home/header/menu/menu.component';
-import { AboutMeComponent } from './home/header/about-me/about-me.component';
-import { ServicesComponent } from './home/header/services/services.component';
+import { HomeComponent } from './home/home.component'
+import { HeaderComponent } from './home/header/header.component'
+import { MenuComponent } from './home/header/menu/menu.component'
+import { AboutMeComponent } from './home/header/about-me/about-me.component'
+import { ServicesComponent } from './home/header/services/services.component'
+import { ContactComponent } from './home/main/contact/contact.component'
+import { MainComponent } from './home/main/main.component'
+import { FooterComponent } from './home/footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -20,6 +23,8 @@ import { ServicesComponent } from './home/header/services/services.component';
     HeaderComponent,
     AboutMeComponent,
     ServicesComponent,
+    MainComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,10 +32,11 @@ import { ServicesComponent } from './home/header/services/services.component';
     BrowserAnimationsModule,
     FormsModule,
     MenuComponent,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ContactComponent,
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
