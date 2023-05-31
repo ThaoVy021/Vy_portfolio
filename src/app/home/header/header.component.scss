@@ -1,9 +1,5 @@
-@import "../../app.component.scss";
+@import '../../app.component.scss';
 
 .header {
-    background-color: $main-bg;
-
-    .portfolio-menu {
-        padding-right: 10%;
-    }
+  background-color: $main-bg;
 }

@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
-
+import { Component, HostListener } from '@angular/core'
+import { MatIconModule } from '@angular/material/icon'
+import { MatMenuModule } from '@angular/material/menu'
+import { MatButtonModule } from '@angular/material/button'
 
 @Component({
   selector: 'portfolio-menu',
@@ -12,13 +11,25 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [MatButtonModule, MatMenuModule, MatIconModule],
 })
 export class MenuComponent {
-  activeButton: string | undefined;
+  activeButton: string | undefined
+  isSticky: boolean = false
 
   ngOnInit() {
-    this.activeButton = 'home'; // Set the default active button to 'home'
+    this.activeButton = 'home' // Set the default active button to 'home'
   }
 
   setActiveButton(button: string) {
-    this.activeButton = button;
+    this.activeButton = button
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const scrollPosition = window.pageYOffset
+
+    if (scrollPosition >= 50) {
+      this.isSticky = true
+    } else {
+      this.isSticky = false
+    }
   }
 }

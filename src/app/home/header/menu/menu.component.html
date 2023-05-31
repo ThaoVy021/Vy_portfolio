@@ -1,51 +1,55 @@
-<div>
-  <a
-    href="#"
-    mat-button
-    class="mr-10 buttonMenu"
-    (click)="setActiveButton('home')"
-    [class.active]="activeButton === 'home'"
-  >
-    Home
-  </a>
+<div class="menu">
+  <div class="container m-auto flex justify-end">
+    <nav [class]="{ sticky: isSticky }">
+      <a
+        href="#"
+        mat-button
+        class="mr-10 buttonMenu"
+        (click)="setActiveButton('home')"
+        [class.active]="activeButton === 'home'"
+      >
+        Home
+      </a>
 
-  <a
-    href="#"
-    mat-button
-    class="mr-10 buttonMenu"
-    (click)="setActiveButton('Site Project')"
-    [class.active]="activeButton === 'Site Project'"
-  >
-    Site Project
-  </a>
+      <a
+        href="#"
+        mat-button
+        class="mr-10 buttonMenu"
+        (click)="setActiveButton('Site Project')"
+        [class.active]="activeButton === 'Site Project'"
+      >
+        Site Project
+      </a>
 
-  <a
-    href="#"
-    mat-button
-    class="mr-10 buttonMenu"
-    (click)="setActiveButton('Contact')"
-    [class.active]="activeButton === 'Contact'"
-  >
-    Contact
-  </a>
+      <a
+        href="#"
+        mat-button
+        class="mr-10 buttonMenu"
+        (click)="setActiveButton('Contact')"
+        [class.active]="activeButton === 'Contact'"
+      >
+        Contact
+      </a>
+
+      <button
+        mat-icon-button
+        color="warn"
+        [matMenuTriggerFor]="menu"
+        class="iconMenuMobile"
+        aria-label="Example icon button with a menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <mat-menu #menu="matMenu" class="block">
+        <button mat-menu class="mr-10 buttonMenuMobile">Home</button>
+
+        <button mat-menu class="mr-10 buttonMenuMobile">Services</button>
+
+        <button mat-menu class="mr-10 buttonMenuMobile">Works</button>
+
+        <button mat-menu class="mr-10 buttonMenuMobile">Contact</button>
+      </mat-menu>
+    </nav>
+  </div>
 </div>
-
-<button
-  mat-icon-button
-  color="warn"
-  [matMenuTriggerFor]="menu"
-  class="iconMenuMobile"
-  aria-label="Example icon button with a menu icon"
->
-  <mat-icon>menu</mat-icon>
-</button>
-
-<mat-menu #menu="matMenu" class="block">
-  <button mat-menu class="mr-10 buttonMenuMobile">Home</button>
-
-  <button mat-menu class="mr-10 buttonMenuMobile">Services</button>
-
-  <button mat-menu class="mr-10 buttonMenuMobile">Works</button>
-
-  <button mat-menu class="mr-10 buttonMenuMobile">Contact</button>
-</mat-menu>
