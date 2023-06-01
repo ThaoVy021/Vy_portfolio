@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core'
 import { MatIconModule } from '@angular/material/icon'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatButtonModule } from '@angular/material/button'
+import { BehaviorSubject } from 'rxjs'
 
 @Component({
   selector: 'portfolio-menu',
@@ -21,6 +22,15 @@ export class MenuComponent {
   setActiveButton(button: string) {
     this.activeButton = button
   }
+
+  // scrollToElement($element: any): void {
+  //   console.log($element)
+  //   $element.scrollIntoView({
+  //     behavior: 'smooth',
+  //     block: 'start',
+  //     inline: 'nearest',
+  //   })
+  // }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {

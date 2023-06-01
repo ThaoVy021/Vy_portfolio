@@ -1,6 +1,6 @@
-<div class="menu">
+<div class="menu" id="topScrollAnchor">
   <div class="container m-auto flex justify-end">
-    <nav [class]="{ sticky: isSticky }">
+    <nav [class]="{ sticky: isSticky, nonSticky: !isSticky }">
       <a
         href="#"
         mat-button
@@ -22,7 +22,7 @@
       </a>
 
       <a
-        href="#"
+        href="#contact"
         mat-button
         class="mr-10 buttonMenu"
         (click)="setActiveButton('Contact')"
@@ -42,13 +42,11 @@
       </button>
 
       <mat-menu #menu="matMenu" class="block">
-        <button mat-menu class="mr-10 buttonMenuMobile">Home</button>
+        <a href="#" mat-menu class="mr-10 buttonMenuMobile">Home</a>
 
-        <button mat-menu class="mr-10 buttonMenuMobile">Services</button>
+        <a mat-menu class="mr-10 buttonMenuMobile">Site Project</a>
 
-        <button mat-menu class="mr-10 buttonMenuMobile">Works</button>
-
-        <button mat-menu class="mr-10 buttonMenuMobile">Contact</button>
+        <a href="#contact" mat-menu class="mr-10 buttonMenuMobile">Contact</a>
       </mat-menu>
     </nav>
   </div>

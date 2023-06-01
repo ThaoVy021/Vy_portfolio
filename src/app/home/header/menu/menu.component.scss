@@ -2,8 +2,20 @@
 
 .menu {
   width: 100%;
-  transition: all 1s ease;
   z-index: 9;
+  animation-duration: 2.5s;
+  animation-name: show-portfolio;
+  animation-timing-function: linear;
+
+  @keyframes show-portfolio {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
   nav {
     position: relative;
     padding: 20px;
@@ -38,11 +50,37 @@
     background: $white;
     left: 0;
     padding-right: 14%;
+    animation: sticky-menu 1s ease-in-out;
+
+    @keyframes sticky-menu {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  nav.nonSticky {
+    animation: nonSticky-menu 0.5s ease-in-out;
+    animation-timing-function: linear;
+
+    @keyframes nonSticky-menu {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-5%);
+      }
+    }
   }
 }
 
 .iconMenuMobile {
   display: none;
+  color: $primaryColor;
+
   @media (max-width: 630px) {
     display: block;
   }
