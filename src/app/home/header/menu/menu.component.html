@@ -1,37 +1,37 @@
 <div class="menu" id="topScrollAnchor">
   <div class="container m-auto flex justify-end">
     <nav [class]="{ sticky: isSticky, nonSticky: !isSticky }">
-      <a
-        href="#"
+      <button
         mat-button
         class="mr-10 buttonMenu"
-        (click)="setActiveButton('home')"
-        [class.active]="activeButton === 'home'"
+        (click)="[scrollTo('about-me'), setActiveButton('about-me')]"
+        [class.active]="activeButton === 'about-me'"
+        data-section="about-me"
       >
         Home
-      </a>
-
-      <a
-        href="#"
-        mat-button
-        class="mr-10 buttonMenu"
-        (click)="setActiveButton('Site Project')"
-        [class.active]="activeButton === 'Site Project'"
-      >
-        Site Project
-      </a>
-
-      <a
-        href="#contact"
-        mat-button
-        class="mr-10 buttonMenu"
-        (click)="setActiveButton('Contact')"
-        [class.active]="activeButton === 'Contact'"
-      >
-        Contact
-      </a>
+      </button>
 
       <button
+        mat-button
+        class="mr-10 buttonMenu"
+        (click)="[scrollTo('site-projects'), setActiveButton('Site Projects')]"
+        [class.active]="activeButton === 'Site Projects'"
+        data-section="site-projects"
+      >
+        Site Project
+      </button>
+
+      <button
+        mat-button
+        class="mr-10 buttonMenu"
+        (click)="[scrollTo('contact'), setActiveButton('Contact')]"
+        [class.active]="activeButton === 'Contact'"
+        data-section="contact"
+      >
+        Contact
+      </button>
+
+      <!-- <button
         mat-icon-button
         color="warn"
         [matMenuTriggerFor]="menu"
@@ -39,14 +39,37 @@
         aria-label="Example icon button with a menu icon"
       >
         <mat-icon>menu</mat-icon>
-      </button>
+      </button> -->
 
       <mat-menu #menu="matMenu" class="block">
-        <a href="#" mat-menu class="mr-10 buttonMenuMobile">Home</a>
+        <button
+          mat-menu
+          class="mr-10 buttonMenuMobile"
+          (click)="[scrollTo('about-me'), setActiveButton('home')]"
+          [class.active]="activeButton === 'home'"
+        >
+          Home
+        </button>
 
-        <a mat-menu class="mr-10 buttonMenuMobile">Site Project</a>
+        <button
+          mat-menu
+          class="mr-10 buttonMenuMobile"
+          (click)="
+            [scrollTo('site-projects'), setActiveButton('Site Projects')]
+          "
+          [class.active]="activeButton === 'Site Projects'"
+        >
+          Site Project
+        </button>
 
-        <a href="#contact" mat-menu class="mr-10 buttonMenuMobile">Contact</a>
+        <button
+          mat-menu
+          class="mr-10 buttonMenuMobile"
+          (click)="[scrollTo('contact'), setActiveButton('contact')]"
+          [class.active]="activeButton === 'contact'"
+        >
+          Contact
+        </button>
       </mat-menu>
     </nav>
   </div>

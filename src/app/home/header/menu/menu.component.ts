@@ -1,8 +1,7 @@
-import { Component, HostListener } from '@angular/core'
+import { Component, ElementRef, HostListener } from '@angular/core'
 import { MatIconModule } from '@angular/material/icon'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatButtonModule } from '@angular/material/button'
-import { BehaviorSubject } from 'rxjs'
 
 @Component({
   selector: 'portfolio-menu',
@@ -15,22 +14,20 @@ export class MenuComponent {
   activeButton: string | undefined
   isSticky: boolean = false
 
+  constructor(private el: ElementRef) {}
   ngOnInit() {
-    this.activeButton = 'home' // Set the default active button to 'home'
+    this.activeButton = 'about-me'
   }
 
   setActiveButton(button: string) {
     this.activeButton = button
   }
 
-  // scrollToElement($element: any): void {
-  //   console.log($element)
-  //   $element.scrollIntoView({
-  //     behavior: 'smooth',
-  //     block: 'start',
-  //     inline: 'nearest',
-  //   })
-  // }
+  scrollTo(elementId: string) {
+    document.getElementById(elementId)?.scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
@@ -42,4 +39,10 @@ export class MenuComponent {
       this.isSticky = false
     }
   }
+
+  // currentSection = 'home'
+
+  // onSectionChange(sectionId: string) {
+  //   this.currentSection = sectionId
+  // }
 }

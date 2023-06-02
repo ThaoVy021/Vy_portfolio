@@ -1,0 +1,64 @@
+@import '../../../app.component.scss';
+
+.site-project-background {
+  background-color: $blog-bg;
+  color: $white;
+  margin-top: 40px;
+
+  .site-project-total {
+    .site-project {
+      padding: 65px 0 100px;
+      .introduce {
+        text-align: center;
+        h2 {
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 1.5;
+          color: $primaryColor;
+        }
+
+        p {
+          color: $white;
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 1;
+          text-transform: capitalize;
+        }
+      }
+
+      .products {
+        display: flex;
+        padding-top: 40px;
+
+        .product-item {
+          width: 50%;
+          padding: 0 15px;
+          text-align: center;
+
+          .image-product {
+            position: relative;
+            a {
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              width: 100%;
+
+              img {
+                display: block;
+                transition: all 0.5s ease;
+              }
+            }
+            .date-doing-project {
+              position: absolute;
+              z-index: 2;
+              top: 0;
+              right: 33px;
+              padding: 10px;
+              background-color: $blog-bg;
+            }
+          }
+        }
+      }
+    }
+  }
+}

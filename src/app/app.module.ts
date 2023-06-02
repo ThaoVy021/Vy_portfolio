@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { FormsModule } from '@angular/forms'
+import { CommonModule } from '@angular/common'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -15,6 +16,7 @@ import { ServicesComponent } from './home/header/services/services.component'
 import { ContactComponent } from './home/main/contact/contact.component'
 import { MainComponent } from './home/main/main.component'
 import { FooterComponent } from './home/footer/footer.component'
+import { SiteProjectComponent } from './home/main/site-project/site-project.component'
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { FooterComponent } from './home/footer/footer.component'
     ServicesComponent,
     MainComponent,
     FooterComponent,
+    SiteProjectComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    CommonModule,
     MenuComponent,
     FontAwesomeModule,
     ContactComponent,

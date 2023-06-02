@@ -108,7 +108,10 @@
       }
     }
 
-    img {
+    .introduce-image {
+      width: 510px;
+      height: auto;
+
       @media (max-width: 634px) {
         padding-top: 3rem;
       }
