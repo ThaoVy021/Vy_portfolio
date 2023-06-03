@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core'
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'portfolio-home',
@@ -18,38 +18,36 @@ export class HomeComponent {
       window.pageYOffset ||
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
-      0
+      0;
 
-    //console.log('scrollPosition', scrollPosition)
     const navButtons = document.querySelectorAll(
-      '#scrollspy-nav button',
-    ) as NodeListOf<HTMLButtonElement>
-
-    console.log('navButtons', navButtons)
+      '#scrollspy-nav button'
+    ) as NodeListOf<HTMLButtonElement>;
 
     navButtons.forEach((button: HTMLButtonElement, index: number) => {
       const section = document.querySelector(
-        `#${button.dataset['section']}`,
-      ) as HTMLElement
-      const realOffsetTop = section?.offsetTop
+        `#${button.dataset['section']}`
+      ) as HTMLElement;
+      const realOffsetTop = section?.offsetTop;
 
-      const isBottom =
-        scrollPosition + window.innerHeight === document.body.scrollHeight
+      // const isBottom =
+      //   scrollPosition + window.innerHeight === document.body.scrollHeight
 
-      if (isBottom) {
-        if (index === navButtons.length - 1) {
-          button.classList.add('active')
-        } else {
-          button.classList.remove('active')
-        }
-      } else if (
+      // if (isBottom) {
+      //   if (index === navButtons.length - 1) {
+      //     button.classList.add('active')
+      //   } else {
+      //     button.classList.remove('active')
+      //   }
+      // } else
+      if (
         realOffsetTop <= scrollPosition &&
         realOffsetTop + section.offsetHeight > scrollPosition
       ) {
-        button.classList.add('active')
+        button.classList.add('active');
       } else {
-        button.classList.remove('active')
+        button.classList.remove('active');
       }
-    })
+    });
   }
 }

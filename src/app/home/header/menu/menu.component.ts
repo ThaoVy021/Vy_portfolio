@@ -1,7 +1,7 @@
-import { Component, ElementRef, HostListener } from '@angular/core'
-import { MatIconModule } from '@angular/material/icon'
-import { MatMenuModule } from '@angular/material/menu'
-import { MatButtonModule } from '@angular/material/button'
+import { Component, ElementRef, HostListener } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'portfolio-menu',
@@ -11,38 +11,32 @@ import { MatButtonModule } from '@angular/material/button'
   imports: [MatButtonModule, MatMenuModule, MatIconModule],
 })
 export class MenuComponent {
-  activeButton: string | undefined
-  isSticky: boolean = false
+  activeButton: string | undefined;
+  isSticky: boolean = false;
 
   constructor(private el: ElementRef) {}
   ngOnInit() {
-    this.activeButton = 'about-me'
+    this.activeButton = 'about-me';
   }
 
   setActiveButton(button: string) {
-    this.activeButton = button
+    this.activeButton = button;
   }
 
   scrollTo(elementId: string) {
     document.getElementById(elementId)?.scrollIntoView({
       behavior: 'smooth',
-    })
+    });
   }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    const scrollPosition = window.pageYOffset
+    const scrollPosition = window.pageYOffset;
 
     if (scrollPosition >= 50) {
-      this.isSticky = true
+      this.isSticky = true;
     } else {
-      this.isSticky = false
+      this.isSticky = false;
     }
   }
-
-  // currentSection = 'home'
-
-  // onSectionChange(sectionId: string) {
-  //   this.currentSection = sectionId
-  // }
 }

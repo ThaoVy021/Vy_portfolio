@@ -31,22 +31,25 @@
         Contact
       </button>
 
-      <!-- <button
-        mat-icon-button
-        color="warn"
-        [matMenuTriggerFor]="menu"
-        class="iconMenuMobile"
-        aria-label="Example icon button with a menu icon"
-      >
-        <mat-icon>menu</mat-icon>
-      </button> -->
+      <span>
+        <button
+          mat-icon-button
+          color="warn"
+          [matMenuTriggerFor]="menu"
+          class="iconMenuMobile"
+          aria-label="Example icon button with a menu icon"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+      </span>
 
       <mat-menu #menu="matMenu" class="block">
         <button
           mat-menu
           class="mr-10 buttonMenuMobile"
-          (click)="[scrollTo('about-me'), setActiveButton('home')]"
-          [class.active]="activeButton === 'home'"
+          (click)="[scrollTo('about-me'), setActiveButton('about-me')]"
+          [class.active]="activeButton === 'about-me'"
+          data-section="about-me"
         >
           Home
         </button>
@@ -58,6 +61,7 @@
             [scrollTo('site-projects'), setActiveButton('Site Projects')]
           "
           [class.active]="activeButton === 'Site Projects'"
+          data-section="site-projects"
         >
           Site Project
         </button>
@@ -65,8 +69,9 @@
         <button
           mat-menu
           class="mr-10 buttonMenuMobile"
-          (click)="[scrollTo('contact'), setActiveButton('contact')]"
-          [class.active]="activeButton === 'contact'"
+          (click)="[scrollTo('contact'), setActiveButton('Contact')]"
+          [class.active]="activeButton === 'Contact'"
+          data-section="contact"
         >
           Contact
         </button>
