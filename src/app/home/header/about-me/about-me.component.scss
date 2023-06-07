@@ -93,8 +93,9 @@
           margin-right: 8px;
 
           @media (max-width: 365px) {
-            margin-top: 1rem;
+            margin-bottom: 1rem;
             text-align: center;
+            margin-right: 0;
           }
         }
 

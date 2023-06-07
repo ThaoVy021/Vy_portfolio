@@ -1,5 +1,5 @@
-<div class="menu" id="topScrollAnchor">
-  <div class="container m-auto flex justify-end">
+<section class="menu" id="topScrollAnchor">
+  <div class="container m-auto flex justify-center">
     <nav [class]="{ sticky: isSticky, nonSticky: !isSticky }">
       <button
         mat-button
@@ -46,7 +46,7 @@
       <mat-menu #menu="matMenu" class="block">
         <button
           mat-menu
-          class="mr-10 buttonMenuMobile"
+          class="m-0 w-full text-left buttonMenuMobile"
           (click)="[scrollTo('about-me'), setActiveButton('about-me')]"
           [class.active]="activeButton === 'about-me'"
           data-section="about-me"
@@ -56,7 +56,7 @@
 
         <button
           mat-menu
-          class="mr-10 buttonMenuMobile"
+          class="m-0 w-full text-left buttonMenuMobile"
           (click)="
             [scrollTo('site-projects'), setActiveButton('Site Projects')]
           "
@@ -68,7 +68,7 @@
 
         <button
           mat-menu
-          class="mr-10 buttonMenuMobile"
+          class="m-0 w-full text-left buttonMenuMobile"
           (click)="[scrollTo('contact'), setActiveButton('Contact')]"
           [class.active]="activeButton === 'Contact'"
           data-section="contact"
@@ -78,4 +78,4 @@
       </mat-menu>
     </nav>
   </div>
-</div>
+</section>

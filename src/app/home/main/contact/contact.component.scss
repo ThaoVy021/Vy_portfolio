@@ -51,62 +51,58 @@
         padding: 0 50px;
       }
 
-      p {
-        width: 100%;
+      .input-form {
+        width: 85%;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
 
-        .input-form {
-          width: 85%;
-          @media (max-width: 768px) {
-            width: 100%;
+        ::ng-deep .mat-mdc-text-field-wrapper {
+          outline: none !important;
+
+          &:focus-within {
+            .mdc-notched-outline__leading {
+              border-color: $primaryColor;
+            }
+
+            .mdc-notched-outline__notch {
+              border-color: $primaryColor;
+              border-right: 0 !important;
+
+              label {
+                color: $primaryColor !important;
+              }
+            }
+
+            .mdc-notched-outline__trailing {
+              border-color: $primaryColor;
+            }
+
+            .color-icon {
+              color: $primaryColor;
+            }
           }
 
-          ::ng-deep .mat-mdc-text-field-wrapper {
-            outline: none !important;
-
-            &:focus-within {
-              .mdc-notched-outline__leading {
-                border-color: $primaryColor;
-              }
-
-              .mdc-notched-outline__notch {
-                border-color: $primaryColor;
-                border-right: 0 !important;
-
-                label {
-                  color: $primaryColor !important;
-                }
-              }
-
-              .mdc-notched-outline__trailing {
-                border-color: $primaryColor;
-              }
-
-              .color-icon {
-                color: $primaryColor;
-              }
+          &:hover {
+            .mdc-notched-outline__leading {
+              border-color: $primaryColor;
             }
 
-            &:hover {
-              .mdc-notched-outline__leading {
-                border-color: $primaryColor;
-              }
-
-              .mdc-notched-outline__notch {
-                border-color: $primaryColor;
-              }
-
-              .mdc-notched-outline__trailing {
-                border-color: $primaryColor;
-              }
-
-              .color-icon {
-                color: $primaryColor;
-              }
+            .mdc-notched-outline__notch {
+              border-color: $primaryColor;
             }
 
-            .mdc-text-field__input {
-              caret-color: $primaryColor !important;
+            .mdc-notched-outline__trailing {
+              border-color: $primaryColor;
             }
+
+            .color-icon {
+              color: $primaryColor;
+            }
+          }
+
+          .mdc-text-field__input {
+            caret-color: $primaryColor !important;
           }
         }
       }

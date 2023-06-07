@@ -17,7 +17,7 @@
           Possess analytical, problem-solving, time-management, team-working,
           and communication.
         </p>
-        <div class="mt-12 example-button-row">
+        <div class="mt-8 example-button-row">
           <a
             href="../../../../assets/files/cv.pdf"
             mat-raised-button
@@ -27,14 +27,15 @@
           >
             Download CV
           </a>
-          <a
+          <button
             href="#contact"
             mat-raised-button
             color="primary"
+            (click)="scrollTo('contact')"
             class="introduce-button-contact"
           >
             Contact
-          </a>
+          </button>
         </div>
       </div>
     </mat-grid-tile>

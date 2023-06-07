@@ -1,12 +1,12 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { FormsModule } from '@angular/forms'
 import { CommonModule } from '@angular/common'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { HomeComponent } from './home/home.component'
 import { HeaderComponent } from './home/header/header.component'
@@ -17,6 +17,7 @@ import { ContactComponent } from './home/main/contact/contact.component'
 import { MainComponent } from './home/main/main.component'
 import { FooterComponent } from './home/footer/footer.component'
 import { SiteProjectComponent } from './home/main/site-project/site-project.component'
+import { ExperienceComponent } from './home/main/experience/experience.component'
 
 @NgModule({
   declarations: [
@@ -34,11 +35,14 @@ import { SiteProjectComponent } from './home/main/site-project/site-project.comp
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     MenuComponent,
     FontAwesomeModule,
     ContactComponent,
+    ExperienceComponent,
   ],
+  exports: [CommonModule, FormsModule, ReactiveFormsModule],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],

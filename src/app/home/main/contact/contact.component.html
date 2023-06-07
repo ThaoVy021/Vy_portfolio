@@ -9,51 +9,56 @@
         </p>
       </div>
 
-      <div class="form-contact">
-        <p>
-          <mat-form-field appearance="outline" class="input-form">
-            <mat-label>Your Name</mat-label>
-            <input matInput placeholder="Your Name" />
-            <mat-icon matSuffix class="color-icon">
-              sentiment_very_satisfied
-            </mat-icon>
-          </mat-form-field>
-        </p>
-        <p>
-          <mat-form-field appearance="outline" class="input-form">
-            <mat-label>Your Email</mat-label>
-            <input matInput placeholder="Your Email" />
-            <mat-icon matSuffix class="color-icon">
-              sentiment_very_satisfied
-            </mat-icon>
-          </mat-form-field>
-        </p>
-        <p>
-          <mat-form-field appearance="outline" class="input-form">
-            <mat-label>Your Subject</mat-label>
-            <input matInput placeholder="Your Subject" />
-            <mat-icon matSuffix class="color-icon">
-              sentiment_very_satisfied
-            </mat-icon>
-          </mat-form-field>
-        </p>
-        <p>
-          <mat-form-field appearance="outline" class="input-form">
-            <mat-label>Your message (optional)</mat-label>
-            <textarea
-              matInput
-              placeholder="Your message (optional)"
-              style="height: 200px"
-            ></textarea>
-          </mat-form-field>
-        </p>
+      <form id="form-contact" class="form-contact" (submit)="sendEmail($event)">
+        <mat-form-field appearance="outline" class="input-form">
+          <mat-label>Your Name</mat-label>
+          <input matInput placeholder="Your Name" type="text" name="name" />
+          <mat-icon matSuffix class="color-icon">
+            sentiment_very_satisfied
+          </mat-icon>
+        </mat-form-field>
 
-        <div>
-          <button mat-raised-button color="primary" class="send-message">
-            Send Message
-          </button>
-        </div>
-      </div>
+        <mat-form-field appearance="outline" class="input-form">
+          <mat-label>Your Email</mat-label>
+          <input matInput placeholder="Your Email" type="email" name="email" />
+          <mat-icon matSuffix class="color-icon">
+            sentiment_very_satisfied
+          </mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-form">
+          <mat-label>Your Subject</mat-label>
+          <input
+            matInput
+            placeholder="Your Subject"
+            type="text"
+            name="subject"
+          />
+          <mat-icon matSuffix class="color-icon">
+            sentiment_very_satisfied
+          </mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-form">
+          <mat-label>Your message</mat-label>
+          <textarea
+            matInput
+            placeholder="Your message"
+            style="height: 200px;"
+            type="text"
+            name="message"
+          ></textarea>
+        </mat-form-field>
+
+        <button
+          mat-raised-button
+          type="submit"
+          color="primary"
+          class="send-message"
+        >
+          Send Message
+        </button>
+      </form>
     </div>
   </div>
 </section>

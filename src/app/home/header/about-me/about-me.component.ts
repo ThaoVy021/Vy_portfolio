@@ -1,4 +1,4 @@
-import { Component  } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'portfolio-about-me',
@@ -6,4 +6,10 @@ import { Component  } from '@angular/core';
   styleUrls: ['./about-me.component.scss'],
 })
 export class AboutMeComponent {
+  scrollTo(elementId: string) {
+    window.scrollTo({
+      top: document.getElementById(elementId)?.offsetTop,
+      behavior: 'smooth',
+    })
+  }
 }
