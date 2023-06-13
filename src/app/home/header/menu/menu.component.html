@@ -14,6 +14,16 @@
       <button
         mat-button
         class="mr-10 buttonMenu"
+        (click)="[scrollTo('experiences'), setActiveButton('Experiences')]"
+        [class.active]="activeButton === 'Experiences'"
+        data-section="experiences"
+      >
+        Experiences
+      </button>
+
+      <button
+        mat-button
+        class="mr-10 buttonMenu"
         (click)="[scrollTo('site-projects'), setActiveButton('Site Projects')]"
         [class.active]="activeButton === 'Site Projects'"
         data-section="site-projects"
@@ -52,6 +62,16 @@
           data-section="about-me"
         >
           Home
+        </button>
+
+        <button
+          mat-button
+          class="m-0 w-full text-left buttonMenuMobile"
+          (click)="[scrollTo('experiences'), setActiveButton('Experiences')]"
+          [class.active]="activeButton === 'Experiences'"
+          data-section="experiences"
+        >
+          Experiences
         </button>
 
         <button

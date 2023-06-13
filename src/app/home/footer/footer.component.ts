@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'portfolio-footer',
@@ -8,4 +8,5 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons'
 })
 export class FooterComponent {
   faHeart = faHeart
+  faArrowUp = faArrowUp
 }

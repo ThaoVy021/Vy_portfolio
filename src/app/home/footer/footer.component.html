@@ -6,5 +6,12 @@
         <fa-icon [icon]="faHeart" class="heart-icon"></fa-icon>
       </p>
     </div>
+    <nz-back-top [nzTemplate]="tpl" [nzVisibilityHeight]="100">
+      <ng-template #tpl>
+        <div class="ant-back-top-inner">
+          <fa-icon [icon]="faArrowUp" class="faArrowUp-icon"></fa-icon>
+        </div>
+      </ng-template>
+    </nz-back-top>
   </div>
 </div>
