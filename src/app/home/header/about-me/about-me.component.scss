@@ -1,12 +1,19 @@
 @import '../../../app.component.scss';
 
 .introduce-total {
-  @media (max-width: 634px) {
+  width: 100%;
+  padding: 6rem 4rem;
+
+  @media (max-width: 768px) {
+    padding: 0;
     padding-top: 3rem !important;
   }
 
   .introduce {
-    @media (max-width: 634px) {
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: 1024px) {
       display: block;
     }
 
@@ -113,7 +120,7 @@
       width: 510px;
       height: auto;
 
-      @media (max-width: 634px) {
+      @media (max-width: 1024px) {
         padding-top: 3rem;
       }
     }
