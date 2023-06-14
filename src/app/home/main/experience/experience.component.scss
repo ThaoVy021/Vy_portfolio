@@ -56,22 +56,10 @@
         display: flex;
         align-items: center;
         gap: 20px;
-        animation-name: effects;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-        animation-duration: 1s;
-
-        @keyframes effects {
-          0% {
-            margin-left: 0;
-          }
-          100% {
-            margin-left: 100px;
-          }
-        }
 
         @media (max-width: 1024px) {
-          display: none;
+          justify-content: center;
+          padding: 20px;
         }
 
         span {
@@ -83,12 +71,40 @@
           align-items: center;
           justify-content: center;
           transition: all 0.5s ease;
+          cursor: pointer;
 
           .experience-icon {
             color: $white;
 
             .svg-inline--fa {
               height: 2.5em !important;
+            }
+          }
+
+          &:nth-child(1){
+            background: $white;
+            border: 1px solid $primaryColor;
+            &:hover {
+              background: $primaryColor;
+              scale: 1.1;
+              .experience-icon{
+                color: $white;
+              }
+            }
+
+            .experience-icon{
+              color: $primaryColor;
+            }
+          }
+
+          &:nth-child(2){
+            background: $primaryColor;
+            &:hover {
+              scale: 1.1;
+            }
+
+            .experience-icon{
+              color: $white;
             }
           }
         }
@@ -112,7 +128,7 @@
         user-select: none; 
         
         .experience-swiper-slide {
-          width: 300px;
+          width: 400px;
           margin: 0;
 
           .experience-swiper-item {
@@ -183,6 +199,16 @@
     }
   }
 }
+
+// #experiences {
+//   position: relative;
+//   transform: translateY(100%);
+//   transition: transform 0.5s ease-out;
+// }
+
+// #experiences.visible {
+//   transform: translateY(0);
+// }
 
 .slick-slider {
   width: 50%;

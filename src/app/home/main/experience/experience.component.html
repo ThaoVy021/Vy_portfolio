@@ -6,7 +6,10 @@
         <span>This is my own experience</span>
       </div>
       <div class="experience-introduction-swiper-button">
-        <span class="experience-swiper-button-next">
+        <span class="experience-swiper-button-prev" (click)="prev()">
+          <fa-icon [icon]="faArrowLeft" class="experience-icon"></fa-icon>
+        </span>
+        <span class="experience-swiper-button-next" (click)="next()">
           <fa-icon [icon]="faArrowRight" class="experience-icon"></fa-icon>
         </span>
       </div>

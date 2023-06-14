@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, ViewChild } from '@angular/core'
 import { faReact, faAngular } from '@fortawesome/free-brands-svg-icons'
 import {
   faArrowLeft,
@@ -6,8 +6,8 @@ import {
   faMobileScreen,
   faPaintbrush,
 } from '@fortawesome/free-solid-svg-icons'
-import { faClipboard } from '@fortawesome/free-regular-svg-icons'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
+import { SlickCarouselComponent } from 'ngx-slick-carousel'
 
 interface IExperiences {
   icon: IconProp
@@ -28,8 +28,6 @@ export class ExperienceComponent {
   faPaintbrush = faPaintbrush
   faReact = faReact
   faAngular = faAngular
-
-  // slideConfig = { slidesToShow: 4, slidesToScroll: 4 }
 
   effect = 'scrollx'
   experiences: IExperiences[] = [
@@ -61,5 +59,16 @@ export class ExperienceComponent {
       years: '1',
     },
   ]
-  slideConfig = { slidesToShow: 3, slidesToScroll: 3 }
+  slideConfig = { slidesToShow: 2, slidesToScroll: 2 }
+
+  @ViewChild('slickModal')
+  slickModal!: SlickCarouselComponent
+
+  next() {
+    this.slickModal.slickNext()
+  }
+
+  prev() {
+    this.slickModal.slickPrev()
+  }
 }
