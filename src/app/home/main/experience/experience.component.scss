@@ -31,6 +31,10 @@
           font-size: 22px;
           line-height: 1.5;
           color: $primaryColor;
+
+          @media (max-width: 635px) {
+            font-size: 18px;
+          }
         }
 
         span {
@@ -39,6 +43,10 @@
           line-height: 1.5;
           text-transform: capitalize;
           color: $blueColor;
+
+          @media (max-width: 635px) {
+            font-size: 25px;
+          }
         }
       }
 
@@ -74,7 +82,6 @@
           align-items: center;
           justify-content: center;
           transition: all 0.5s ease;
-          cursor: pointer;
 
           .experience-icon {
             color: $white;
@@ -92,7 +99,7 @@
       width: 75%;
 
       @media (max-width: 1024px) {
-        width: 100%;
+        width: 90%;
       }
 
       .experience-swiper-wrapper {
@@ -104,7 +111,7 @@
         user-select: none; 
         
         .experience-swiper-slide {
-          width: 200px;
+          width: 300px;
           margin: 0;
 
           .experience-swiper-item {
@@ -116,6 +123,11 @@
             text-align: center;
             height: 300px;
 
+            @media (max-width: 635px) {
+               height: 220px;
+               padding: 35px 10px;
+            }
+
             span {
               color: #fff;
               border-radius: 50%;
@@ -126,10 +138,19 @@
               align-items: center;
               justify-content: center;
 
+              @media (max-width: 635px) {
+                width: 50px;
+                height: 50px;
+              }
+
               .experience-icon {
                 width: 60px;
                 height: auto;
                 font-size: 30px;
+
+                @media (max-width: 635px) {
+                  font-size: 20px;
+                }
               }
             }
 
@@ -139,12 +160,21 @@
               line-height: 31px;
               color: $blueColor;
               margin: 20px 0 15px;
+              
+              @media (max-width: 635px) {
+                font-size: 15px;
+                line-height: 20px;
+              }
             }
 
             .experience {
               color: $text-gray;
               font-size: 18px;
               line-height: 1.8;
+
+              @media (max-width: 635px) {
+                font-size: 14px;
+              }
             }
           }
         }

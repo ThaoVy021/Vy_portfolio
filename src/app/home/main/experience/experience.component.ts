@@ -61,26 +61,5 @@ export class ExperienceComponent {
       years: '1',
     },
   ]
-  slides = [
-    { img: 'https://via.placeholder.com/600.png/09f/fff' },
-    { img: 'https://via.placeholder.com/600.png/021/fff' },
-    { img: 'https://via.placeholder.com/600.png/321/fff' },
-    { img: 'https://via.placeholder.com/600.png/422/fff' },
-    { img: 'https://via.placeholder.com/600.png/654/fff' },
-  ]
   slideConfig = { slidesToShow: 3, slidesToScroll: 3 }
-  slickInit(e: any) {
-    console.log('slick initialized')
-  }
-  breakpoint(e: any) {
-    console.log('breakpoint')
-  }
-  afterChange(e: any) {
-    console.log('afterChange')
-  }
-  beforeChange(e: any) {
-    console.log('beforeChange')
-  }
-  constructor() {}
-  ngOnInit(): void {}
 }
