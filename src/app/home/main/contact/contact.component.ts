@@ -1,9 +1,10 @@
-import { Component } from '@angular/core'
+import { Component, TemplateRef, Input } from '@angular/core'
 import { MatIconModule } from '@angular/material/icon'
 import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
-import { FormBuilder, Validators, FormGroup } from '@angular/forms'
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser'
+import { NzNotificationService } from 'ng-zorro-antd/notification'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'portfolio-contact',
@@ -13,9 +14,22 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser'
   imports: [MatFormFieldModule, MatInputModule, MatIconModule],
 })
 export class ContactComponent {
+  faHeart = faHeart
+  constructor(private notification: NzNotificationService) {}
+
+  createBasicNotification(template: TemplateRef<{}>): void {
+    this.notification.template(template)
+  }
+
+  scrollTo(elementId: string) {
+    window.scrollTo({
+      top: document.getElementById(elementId)?.offsetTop,
+      behavior: 'smooth',
+    })
+  }
+
   public sendEmail(e: Event) {
     e.preventDefault()
-    console.log('sendEmail')
     emailjs
       .sendForm(
         'service_8nkluuv',
@@ -25,7 +39,7 @@ export class ContactComponent {
       )
       .then(
         (result: EmailJSResponseStatus) => {
-          console.log(result.text)
+          this.createBasicNotification
         },
         (error) => {
           console.log(error.text)

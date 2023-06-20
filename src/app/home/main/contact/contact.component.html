@@ -9,10 +9,27 @@
         </p>
       </div>
 
-      <form id="form-contact" class="form-contact" (submit)="sendEmail($event)">
+      <form
+        id="form-contact"
+        class="form-contact"
+        (submit)="
+          [
+            sendEmail($event),
+            createBasicNotification(template),
+            scrollTo('about-me'),
+          ]
+        "
+      >
         <mat-form-field appearance="outline" class="input-form">
           <mat-label>Your Name</mat-label>
-          <input matInput placeholder="Your Name" type="text" name="name" />
+          <input
+            matInput
+            placeholder="Your Name"
+            type="text"
+            name="name"
+            required
+            #textInput
+          />
           <mat-icon matSuffix class="color-icon">
             sentiment_very_satisfied
           </mat-icon>
@@ -20,7 +37,14 @@
 
         <mat-form-field appearance="outline" class="input-form">
           <mat-label>Your Email</mat-label>
-          <input matInput placeholder="Your Email" type="email" name="email" />
+          <input
+            matInput
+            placeholder="Your Email"
+            type="email"
+            name="email"
+            required
+            #textInput
+          />
           <mat-icon matSuffix class="color-icon">
             sentiment_very_satisfied
           </mat-icon>
@@ -33,6 +57,8 @@
             placeholder="Your Subject"
             type="text"
             name="subject"
+            required
+            #textInput
           />
           <mat-icon matSuffix class="color-icon">
             sentiment_very_satisfied
@@ -47,8 +73,23 @@
             style="height: 200px;"
             type="text"
             name="message"
+            required
+            #textInput
           ></textarea>
         </mat-form-field>
+
+        <ng-template #template>
+          <div class="ant-notification-notice-content">
+            <div class="ant-notification-notice-with-icon">
+              <div class="ant-notification-notice-message">
+                Thanks for your interest.
+              </div>
+              <div class="ant-notification-notice-description">
+                I appreciate your connection. I will reply as soon as I can.
+              </div>
+            </div>
+          </div>
+        </ng-template>
 
         <button
           mat-raised-button

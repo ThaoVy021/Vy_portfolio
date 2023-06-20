@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { NzCarouselModule } from 'ng-zorro-antd/carousel'
 import { NzBackTopModule } from 'ng-zorro-antd/back-top'
+import { NzNotificationModule } from 'ng-zorro-antd/notification'
 
 import { HomeComponent } from './home/home.component'
 import { HeaderComponent } from './home/header/header.component'
@@ -50,6 +51,7 @@ registerLocaleData(en)
     CommonModule,
     NzCarouselModule,
     NzBackTopModule,
+    NzNotificationModule,
     MenuComponent,
     FontAwesomeModule,
     ContactComponent,
