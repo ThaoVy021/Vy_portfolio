@@ -5,6 +5,8 @@ import {
   faArrowRight,
   faMobileScreen,
   faPaintbrush,
+  faDiamond,
+  faWater,
 } from '@fortawesome/free-solid-svg-icons'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { SlickCarouselComponent } from 'ngx-slick-carousel'
@@ -28,6 +30,8 @@ export class ExperienceComponent {
   faPaintbrush = faPaintbrush
   faReact = faReact
   faAngular = faAngular
+  faDiamond = faDiamond
+  faWater = faWater
 
   effect = 'scrollx'
   experiences: IExperiences[] = [
@@ -58,8 +62,20 @@ export class ExperienceComponent {
       name: 'Angular',
       years: '1',
     },
+    {
+      icon: faDiamond,
+      color: 'bg-[#a5dc86]',
+      name: 'Ant-design',
+      years: '1+',
+    },
+    {
+      icon: faWater,
+      color: 'bg-[#f0bf79]',
+      name: 'Tailwind CSS',
+      years: '1+',
+    },
   ]
-  slideConfig = { slidesToShow: 2, slidesToScroll: 2 }
+  slideConfig = { slidesToShow: 3, slidesToScroll: 3 }
 
   @ViewChild('slickModal')
   slickModal!: SlickCarouselComponent
