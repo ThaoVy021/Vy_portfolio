@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core'
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core'
 import { faReact, faAngular } from '@fortawesome/free-brands-svg-icons'
 import {
   faArrowLeft,
@@ -10,6 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { SlickCarouselComponent } from 'ngx-slick-carousel'
+import { trigger, state, style, animate, transition } from '@angular/animations'
 
 interface IExperiences {
   icon: IconProp
@@ -22,6 +23,26 @@ interface IExperiences {
   selector: 'portfolio-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss'],
+  animations: [
+    trigger('scrollAnimation', [
+      state(
+        'show',
+        style({
+          opacity: 1,
+          transform: 'translateY(0)',
+        }),
+      ),
+      state(
+        'hide',
+        style({
+          opacity: 0,
+          transform: 'translateY(100%)',
+        }),
+      ),
+      transition('show => hide', animate('700ms ease-out')),
+      transition('hide => show', animate('700ms ease-out')),
+    ]),
+  ],
 })
 export class ExperienceComponent {
   faArrowLeft = faArrowLeft
@@ -32,6 +53,20 @@ export class ExperienceComponent {
   faAngular = faAngular
   faDiamond = faDiamond
   faWater = faWater
+
+  isVisible = 'hide'
+  constructor(private el: ElementRef) {}
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop
+    const scrollPosition = window.pageYOffset
+    if (scrollPosition >= componentPosition - 650) {
+      this.isVisible = 'show'
+    } else {
+      this.isVisible = 'hide'
+    }
+  }
 
   effect = 'scrollx'
   experiences: IExperiences[] = [
