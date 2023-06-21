@@ -40,8 +40,8 @@ export class HomeComponent {
           button.classList.remove('active')
         }
       } else if (
-        realOffsetTop <= scrollPosition &&
-        realOffsetTop + section.offsetHeight > scrollPosition
+        realOffsetTop <= scrollPosition + 300 &&
+        realOffsetTop + section.offsetHeight > scrollPosition + 300
       ) {
         button.classList.add('active')
       } else {
