@@ -12,4 +12,11 @@ export class ServicesComponent {
   faRProject = faRProject
   faLaptopCode = faLaptopCode
   faClipboard = faClipboard
+
+  scrollTo(elementId: string) {
+    window.scrollTo({
+      top: (document.getElementById(elementId)?.offsetTop ?? 0) - 250,
+      behavior: 'smooth',
+    })
+  }
 }
