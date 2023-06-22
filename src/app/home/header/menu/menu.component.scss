@@ -3,7 +3,7 @@
 .menu {
   width: 100%;
   z-index: 9;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-name: show-portfolio;
   animation-timing-function: linear;
 
@@ -80,6 +80,10 @@
     @media (max-width: 768px) {
       width: 100%;
       padding-left: 0;
+    }
+
+    .iconMenuMobile {
+      margin-left: -12px;
     }
   }
 }
