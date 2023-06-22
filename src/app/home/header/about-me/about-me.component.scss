@@ -92,10 +92,13 @@
         margin: 20px 0 0;
         font-size: 14px;
         line-height: 1.2; 
+        @media (max-width: 383px) {
+          font-size: 12px;
+        }
 
         p {
           color: $text-gray;
-          white-space: nowrap; 
+          white-space: normal; 
           overflow: hidden; 
           opacity: 0; 
   
