@@ -28,7 +28,7 @@ export class MenuComponent {
     //   behavior: 'smooth',
     // })
     window.scrollTo({
-      top: (document.getElementById(elementId)?.offsetTop ?? 0) - 250,
+      top: (document.getElementById(elementId)?.offsetTop ?? 0) - 230,
       behavior: 'smooth',
     })
   }
