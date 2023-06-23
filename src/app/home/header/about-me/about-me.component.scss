@@ -75,7 +75,7 @@
         overflow: hidden; 
         opacity: 0; 
         animation: typingTitle 0.5s steps(40, end);
-        animation-delay: 1.5s;
+        animation-delay: 1s;
         animation-fill-mode: forwards;
 
         @keyframes typingTitle {
@@ -98,7 +98,7 @@
 
         p {
           color: $text-gray;
-          white-space: normal; 
+          white-space: nowrap; 
           overflow: hidden; 
           opacity: 0; 
   
@@ -114,7 +114,7 @@
             }
 
             @media (max-width: 1024px) {
-              white-space: pre-wrap
+              white-space: normal
             }
           }
           &:nth-child(2){
@@ -129,7 +129,7 @@
             }
 
             @media (max-width: 1024px) {
-              white-space:initial
+              white-space: normal
             }
           }
           &:nth-child(3){
@@ -144,7 +144,7 @@
             }
 
             @media (max-width: 1024px) {
-              white-space:initial
+              white-space: normal
             }
           }
         }

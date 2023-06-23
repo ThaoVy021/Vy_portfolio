@@ -110,7 +110,24 @@ export class ExperienceComponent {
       years: '1+',
     },
   ]
-  slideConfig = { slidesToShow: 3, slidesToScroll: 3 }
+  slideConfig = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1.5,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  }
 
   @ViewChild('slickModal')
   slickModal!: SlickCarouselComponent
