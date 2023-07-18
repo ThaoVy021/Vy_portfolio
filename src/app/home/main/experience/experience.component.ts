@@ -74,40 +74,40 @@ export class ExperienceComponent {
       icon: faMobileScreen,
       color: 'bg-[#4AC3CA]',
       name: 'Web App Development',
-      years: '2+',
+      years: '3+',
     },
 
     {
       icon: faPaintbrush,
       color: 'bg-[#9c19c9]',
       name: 'UI/UX',
-      years: '2+',
+      years: '3+',
     },
 
     {
       icon: faReact,
       color: 'bg-[#FFAF00]',
       name: 'ReactJS',
-      years: '1+',
+      years: '2+',
     },
 
     {
       icon: faAngular,
       color: 'bg-[#FF4E6E]',
       name: 'Angular',
-      years: '1',
+      years: '1+',
     },
     {
       icon: faDiamond,
       color: 'bg-[#a5dc86]',
       name: 'Ant-design',
-      years: '1+',
+      years: '2+',
     },
     {
       icon: faWater,
       color: 'bg-[#f0bf79]',
       name: 'Tailwind CSS',
-      years: '1+',
+      years: '2+',
     },
   ]
   slideConfig = {
