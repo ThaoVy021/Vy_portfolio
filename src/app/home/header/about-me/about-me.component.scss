@@ -23,13 +23,17 @@
         font-size: 24px;
         font-weight: 700;
         line-height: 1.3;
-        white-space: nowrap; 
-        overflow: hidden; 
+        white-space: nowrap;
+        overflow: hidden;
         animation: typingHi 1s steps(40, end);
 
         @keyframes typingHi {
-          from { width: 0 }
-          to { width: 100% }
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
         }
 
         @media (max-width: 376px) {
@@ -44,16 +48,21 @@
         line-height: 1.5;
         margin: 10px 0;
         width: fit-content;
-        white-space: nowrap; 
-        overflow: hidden; 
+        white-space: nowrap;
+        overflow: hidden;
         opacity: 0;
         animation: typingName 0.5s steps(40, end);
         animation-delay: 0.5s;
         animation-fill-mode: forwards;
 
         @keyframes typingName {
-          from { width: 0; }
-          to { width: 100%; opacity: 1; }
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+            opacity: 1;
+          }
         }
 
         @media (max-width: 1024px) {
@@ -71,16 +80,21 @@
         font-weight: 400;
         line-height: 1.2;
         text-transform: capitalize;
-        white-space: nowrap; 
-        overflow: hidden; 
-        opacity: 0; 
+        white-space: nowrap;
+        overflow: hidden;
+        opacity: 0;
         animation: typingTitle 0.5s steps(40, end);
         animation-delay: 1s;
         animation-fill-mode: forwards;
 
         @keyframes typingTitle {
-          from { width: 0; }
-          to { width: 100%; opacity: 1; }
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+            opacity: 1;
+          }
         }
 
         @media (max-width: 376px) {
@@ -91,65 +105,85 @@
       .introduce-summary {
         margin: 20px 0 0;
         font-size: 14px;
-        line-height: 1.2; 
+        line-height: 1.2;
         @media (max-width: 383px) {
           font-size: 12px;
         }
 
         p {
           color: $text-gray;
-          white-space: nowrap; 
-          overflow: hidden; 
-          opacity: 0; 
-  
-           &:nth-child(1){
-            content: "";
-            animation: typingSummary1 1s steps(40, end);
+          white-space: nowrap;
+          overflow: hidden;
+          opacity: 0;
+
+          &:nth-child(1) {
+            content: '';
+            animation: typingSummary1 0.5s steps(40, end);
+            animation-delay: 1.5s;
+            animation-fill-mode: forwards;
+
+            @keyframes typingSummary1 {
+              from {
+                width: 0;
+                height: 12px;
+              }
+              to {
+                width: 100%;
+                opacity: 1;
+                height: 32px;
+              }
+            }
+
+            @media (max-width: 1024px) {
+              white-space: normal;
+            }
+          }
+          &:nth-child(2) {
+            content: '';
+            animation: typingSummary2 0.55s steps(40, end);
+            animation-delay: 1.8s;
+            animation-fill-mode: forwards;
+
+            @keyframes typingSummary2 {
+              from {
+                width: 0;
+                height: 12px;
+              }
+              to {
+                width: 100%;
+                opacity: 1;
+                height: 32px;
+              }
+            }
+
+            @media (max-width: 1024px) {
+              white-space: normal;
+            }
+          }
+          &:nth-child(3) {
+            content: '';
+            animation: typingSummary3 0.5s steps(40, end);
             animation-delay: 2s;
             animation-fill-mode: forwards;
-    
-            @keyframes typingSummary1 {
-              from { width: 0; height: 12px; }
-              to { width: 100%; opacity: 1; height: 32px;}
-            }
 
-            @media (max-width: 1024px) {
-              white-space: normal
-            }
-          }
-          &:nth-child(2){
-            content: "";
-            animation: typingSummary2 1s steps(40, end);
-            animation-delay: 2.5s;
-            animation-fill-mode: forwards;
-    
-            @keyframes typingSummary2 {
-              from { width: 0; height: 12px; }
-              to { width: 100%; opacity: 1; height: 32px;}
-            }
-
-            @media (max-width: 1024px) {
-              white-space: normal
-            }
-          }
-          &:nth-child(3){
-            content: "";
-            animation: typingSummary3 1s steps(40, end);
-            animation-delay: 3s;
-            animation-fill-mode: forwards;
-    
             @keyframes typingSummary3 {
-              from { width: 0; height: 12px; }
-              to { width: 100%; opacity: 1; height: 32px;}
+              from {
+                width: 0;
+                height: 12px;
+              }
+              to {
+                width: 100%;
+                opacity: 1;
+                height: 32px;
+              }
             }
 
             @media (max-width: 1024px) {
-              white-space: normal
+              white-space: normal;
             }
           }
         }
       }
-       
 
       .introduce-button-download {
         padding: 10px 30px;
@@ -159,16 +193,21 @@
         border: 2px solid transparent;
         border-radius: 50px;
         transition: all 0.5s ease;
-        white-space: nowrap; 
-        overflow: hidden; 
-        opacity: 0; 
-        animation: typingButtonDownload 1s steps(40, end);
-        animation-delay: 4s;
+        white-space: nowrap;
+        overflow: hidden;
+        opacity: 0;
+        animation: typingButtonDownload 0.5s steps(40, end);
+        animation-delay: 2.2s;
         animation-fill-mode: forwards;
 
         @keyframes typingButtonDownload {
-          from { width: 0; }
-          to { width: 100%; opacity: 1; }
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+            opacity: 1;
+          }
         }
 
         &:hover {
@@ -186,16 +225,21 @@
         border: 2px solid $primaryColor;
         border-radius: 50px;
         transition: all 0.5s ease;
-        white-space: nowrap; 
-        overflow: hidden; 
-        opacity: 0; 
-        animation: typingButtonContact 1s steps(40, end);
-        animation-delay: 4.5s;
+        white-space: nowrap;
+        overflow: hidden;
+        opacity: 0;
+        animation: typingButtonContact 0.5s steps(40, end);
+        animation-delay: 2.5s;
         animation-fill-mode: forwards;
 
         @keyframes typingButtonContact {
-          from { width: 113px; }
-          to { width: fit-content ; opacity: 1; }
+          from {
+            width: 113px;
+          }
+          to {
+            width: fit-content;
+            opacity: 1;
+          }
         }
 
         &:hover {
