@@ -74,21 +74,21 @@ export class ExperienceComponent {
       icon: faMobileScreen,
       color: 'bg-[#4AC3CA]',
       name: 'Web App Development',
-      years: '3+',
+      years: '2+',
     },
 
     {
       icon: faPaintbrush,
       color: 'bg-[#9c19c9]',
       name: 'UI/UX',
-      years: '3+',
+      years: '2+',
     },
 
     {
       icon: faReact,
       color: 'bg-[#FFAF00]',
       name: 'ReactJS',
-      years: '2+',
+      years: '1+',
     },
 
     {
