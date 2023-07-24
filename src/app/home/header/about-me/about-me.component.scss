@@ -182,6 +182,28 @@
               white-space: normal;
             }
           }
+          &:nth-child(4) {
+            content: '';
+            animation: typingSummary4 0.5s steps(40, end);
+            animation-delay: 2.2s;
+            animation-fill-mode: forwards;
+
+            @keyframes typingSummary4 {
+              from {
+                width: 0;
+                height: 12px;
+              }
+              to {
+                width: 100%;
+                opacity: 1;
+                height: 32px;
+              }
+            }
+
+            @media (max-width: 1024px) {
+              white-space: normal;
+            }
+          }
         }
       }
 
@@ -197,7 +219,7 @@
         overflow: hidden;
         opacity: 0;
         animation: typingButtonDownload 0.5s steps(40, end);
-        animation-delay: 2.2s;
+        animation-delay: 2.4s;
         animation-fill-mode: forwards;
 
         @keyframes typingButtonDownload {
@@ -229,7 +251,7 @@
         overflow: hidden;
         opacity: 0;
         animation: typingButtonContact 0.5s steps(40, end);
-        animation-delay: 2.5s;
+        animation-delay: 2.7s;
         animation-fill-mode: forwards;
 
         @keyframes typingButtonContact {
