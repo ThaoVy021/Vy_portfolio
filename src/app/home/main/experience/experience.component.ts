@@ -1,5 +1,9 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core'
-import { faReact, faAngular } from '@fortawesome/free-brands-svg-icons'
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import {
+  faReact,
+  faAngular,
+  faStripeS,
+} from '@fortawesome/free-brands-svg-icons';
 import {
   faArrowLeft,
   faArrowRight,
@@ -7,16 +11,22 @@ import {
   faPaintbrush,
   faDiamond,
   faWater,
-} from '@fortawesome/free-solid-svg-icons'
-import { IconProp } from '@fortawesome/fontawesome-svg-core'
-import { SlickCarouselComponent } from 'ngx-slick-carousel'
-import { trigger, state, style, animate, transition } from '@angular/animations'
+} from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { SlickCarouselComponent } from 'ngx-slick-carousel';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 interface IExperiences {
-  icon: IconProp
-  color: string
-  name: string
-  years: string
+  icon: IconProp;
+  color: string;
+  name: string;
+  years: string;
 }
 
 @Component({
@@ -30,14 +40,14 @@ interface IExperiences {
         style({
           opacity: 1,
           transform: 'translateY(0)',
-        }),
+        })
       ),
       state(
         'hide',
         style({
           opacity: 0,
           transform: 'translateY(100%)',
-        }),
+        })
       ),
       transition('show => hide', animate('700ms ease-out')),
       transition('hide => show', animate('700ms ease-out')),
@@ -45,30 +55,30 @@ interface IExperiences {
   ],
 })
 export class ExperienceComponent {
-  faArrowLeft = faArrowLeft
-  faArrowRight = faArrowRight
-  faMobileScreen = faMobileScreen
-  faPaintbrush = faPaintbrush
-  faReact = faReact
-  faAngular = faAngular
-  faDiamond = faDiamond
-  faWater = faWater
+  faArrowLeft = faArrowLeft;
+  faArrowRight = faArrowRight;
+  faMobileScreen = faMobileScreen;
+  faPaintbrush = faPaintbrush;
+  faReact = faReact;
+  faAngular = faAngular;
+  faDiamond = faDiamond;
+  faWater = faWater;
 
-  isVisible = 'hide'
+  isVisible = 'hide';
   constructor(private el: ElementRef) {}
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    const componentPosition = this.el.nativeElement.offsetTop
-    const scrollPosition = window.pageYOffset
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
     if (scrollPosition >= componentPosition - 650) {
-      this.isVisible = 'show'
+      this.isVisible = 'show';
     } else {
-      this.isVisible = 'hide'
+      this.isVisible = 'hide';
     }
   }
 
-  effect = 'scrollx'
+  effect = 'scrollx';
   experiences: IExperiences[] = [
     {
       icon: faMobileScreen,
@@ -90,6 +100,12 @@ export class ExperienceComponent {
       name: 'ReactJS',
       years: '1+',
     },
+    {
+      icon: faStripeS,
+      color: 'bg-[#c2e7ff]',
+      name: 'Solid JS',
+      years: '1',
+    },
 
     {
       icon: faAngular,
@@ -109,7 +125,7 @@ export class ExperienceComponent {
       name: 'Tailwind CSS',
       years: '2+',
     },
-  ]
+  ];
   slideConfig = {
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -127,16 +143,16 @@ export class ExperienceComponent {
         },
       },
     ],
-  }
+  };
 
   @ViewChild('slickModal')
-  slickModal!: SlickCarouselComponent
+  slickModal!: SlickCarouselComponent;
 
   next() {
-    this.slickModal.slickNext()
+    this.slickModal.slickNext();
   }
 
   prev() {
-    this.slickModal.slickPrev()
+    this.slickModal.slickPrev();
   }
 }
